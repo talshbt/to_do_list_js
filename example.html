@@ -2,27 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Linda's To-Do List App</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>To-Do List App</title>
     <link rel = "Stylesheet" href = "css/todo.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
-    <link rel = "shortcut icon" href="assets/favicon.ico">
-    <link rel="icon" type="image/gif" href="assests/animated_favicon1.gif" >
-    <title>Hello, world!</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
-    <title>W3.CSS</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
 
@@ -32,21 +20,9 @@
             <div class="user-pic">
                     <img id = "img_usr" class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
                       alt="User picture">
-                  </div><br><br>
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <!-- <nav class="navbar navbar-light blue-grey lighten-5"> -->
-                <!-- <form class="form-inline" id = "myform" id = "addNewListButton">
-                  <button class="btn align-middle btn-primary btn-sm" id = "add-list-btn" type="button">Add New List + </button>
-                  <br><input type="text" name="addList" id = "addListInput"/>
-                </form>       -->
-
-                
           
-        <!-- </nav> -->
-
-        
-
-        
+            </div><br><br>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
 
         <nav id="my-menu">
                 <div class="sidebar-menu">
@@ -55,25 +31,23 @@
                 
 
                 </div>
-                
-                        <a href="#" id = "add-list-btn" onclick="addList()" ><i  class="glyphicon glyphicon-plus" ></i>
+                    <br><img class = "line_img" src="line.png">
+
+                    <a href="#"><i class="fa fa-calendar"></i><span>Calendar</span></a>
+                           
+                     <img class = "line_img" src="line.png"></span></a>
+
+                      
+
+                     <a href="#" id = "add-list-btn" onclick="addList()" ><i  class="glyphicon glyphicon-plus" ></i>
                             
-                            <span>Add New List<br>
-                                <input type="text" name="menu-list" id = "addListInput"/>
-   
-                            <!-- <input type="text" name="addList" id = "addListInput"/> -->
-                            </span></a>
-                            <a href="#"><i class="fa fa-book"></i>
-                              <span>Document</span></a>
-                            <a href="#">
-                              <i class="fa fa-calendar"></i>
-                              <span>Calendar</span>
-                            </a>
+                        <span id = "visible-info">Add New List 
+                                
+                        <input type="text" name="menu-list" id = "addListInput"/></span></a>
+                            <img class = "line_img" src="line.png"alt="Line">
+                                   
                       </div>
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Clients</a>
-                <a href="#">Contact</a>
+        
             </nav>
 
         </nav>
@@ -91,36 +65,33 @@
                     </div>
                 </div>
         </div>
+
+
+        
     
+        <div class="container">
 
         <div class="d-flex">
-                <div class="list-inline mx-auto justify-content-center">
-                    <!-- <form name="toDoList">
-                            <input type="text" name="ListItem"/>
-                    </form>
-
-                    <button id="button" type="button" class="btn btn-primary">+</button> -->
-
+                <!-- <div class="list-inline mx-auto justify-content-center"> -->
                     <div class="container mt-3">
                         <div class="input-group mb-3">
-                            <input type="text" name="ListItem"/>
+                            <input placeholder = "Add New Task" type="text" name="ListItem"/>
                                   <div class="input-group-append">
-                                    <button  id="button" class="btn btn-success" type="submit">+</button>  
+                                    <button id="button" class="btn btn-success" type="submit">+</button>  
                                    </div>
                                 </div>
-                            </div>       
+                            </div>   
+                            
+                            
                         </div>
+
+                        <ul class="list-group" id = "mylist"></ul>
+
                     
                     
                 </div>
 
-
-
-
-        <div class="container">
         
-                <ul class="list-group" id = "mylist">
-                </ul>
         </div>
       </div>
 
