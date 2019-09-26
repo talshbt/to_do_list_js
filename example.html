@@ -1,45 +1,46 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css" />
     <title>To-Do List App</title>
-    <link rel = "Stylesheet" href = "css/todo.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="Stylesheet" href="css/todo.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <body>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
 
-
+<body>
     
+
     <div id="mySidebar" class="sidebar">
-            <div class="user-pic">
-                    <img id = "img_usr" class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
-                      alt="User picture">
-          
-            </div><br><br>
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <div class="user-pic">
+            <img id = "img_usr" class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
+                alt="User picture">
+            </div><br><br> 
+         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a> 
+         <nav id="my-menu">
 
-        <nav id="my-menu">
                 <div class="sidebar-menu">
+                    <div class="sidebar-header">
 
-                <div class="sidebar-header">
-                
-
-                </div>
                     <br><img class = "line_img" src="line.png">
 
                     <a href="#"><i class="fa fa-calendar"></i><span>Calendar</span></a>
                            
                      <img class = "line_img" src="line.png"></span></a>
 
-                      
-
-                     <a href="#" id = "add-list-btn" onclick="addList()" ><i  class="glyphicon glyphicon-plus" ></i>
+                     <a href="#" id = "add-list-btn" onclick="insertList()" ><i  class="glyphicon glyphicon-plus" ></i>
                             
                         <span id = "visible-info">Add New List 
                                 
@@ -47,105 +48,108 @@
                             <img class = "line_img" src="line.png"alt="Line">
                                    
                       </div>
-        
-            </nav>
-
-        </nav>
-      </div>
-      
-      <div id="main">
-        <button class="openbtn" onclick="openNav()">☰</button>  
-        <div class="container mt-3">
-                <header>
-                    <h1>TO-DO LIST <i id="pencil" class="fas fa-pencil-alt"></i></h1>
-                </header>  
-    
-                <div id="banner_image">
-                    <div id="banner_description">
-                    </div>
                 </div>
-        </div>
-
-
-        
-    
-        <div class="container">
-
-        <div class="d-flex">
-                <!-- <div class="list-inline mx-auto justify-content-center"> -->
-                    <div class="container mt-3">
-                        <div class="input-group mb-3">
-                            <input placeholder = "Add New Task" type="text" name="ListItem"/>
-                                  <div class="input-group-append">
-                                    <button id="button" class="btn btn-success" type="submit">+</button>  
-                                   </div>
-                                </div>
-                            </div>   
-                            
-                            
-                        </div>
-
-                        <ul class="list-group" id = "mylist">
-                            <li class="list-group-item ">
-                                <div class="checkbox">
-                                    <input type="checkbox" id="checkbox2" />
-                                    <label for="checkbox2"></label>
-                                    <div class="pull-right action-buttons">
-                                            <a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-pencil"></span></a>
-                                            <a href="http://www.jquery2dotnet.com" class="trash"><span class="glyphicon glyphicon-trash"></span></a>
-                                            <a href="http://www.jquery2dotnet.com" class="flag"><span class="glyphicon glyphicon-flag"></span></a>
-                                    </div></div></li></ul>
-                                    <li class="list-group-item ">
-                                            <div class="checkbox">
-                                                <input type="checkbox" id="checkbox2" />
-                                                <label for="checkbox2"></label>
-                                                <div class="pull-right action-buttons">
-                                                        <a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-pencil"></span></a>
-                                                        <a href="http://www.jquery2dotnet.com" class="trash"><span class="glyphicon glyphicon-trash"></span></a>
-                                                        <a href="http://www.jquery2dotnet.com" class="flag"><span class="glyphicon glyphicon-flag"></span></a>
-                                                </div></div></li></ul>
-                                                <li class="list-group-item ">
-                                                        <div class="checkbox">
-                                                            <input type="checkbox" id="checkbox2" />
-                                                            <label for="checkbox2"></label>
-                                                            <div class="pull-right action-buttons">
-                                                                    <a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-pencil"></span></a>
-                                                                    <a href="http://www.jquery2dotnet.com" class="trash"><span class="glyphicon glyphicon-trash"></span></a>
-                                                                    <a href="http://www.jquery2dotnet.com" class="flag"><span class="glyphicon glyphicon-flag"></span></a>
-                                                            </div></div></li></ul>
-
-                    
-                    
-                </div>
-
-        
-        </div>
-      </div>
-
+            </nav> 
     </div>
 
 
 
 
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">☰</button>
+        <div class="container mt-3">
+            <header>
+                <h1>TO-DO LIST <i id="pencil" class="fas fa-pencil-alt"></i></h1>
+            </header>
+            <div id="banner_image">
+            </div>
+        </div>
+
+
+
+<div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col col-lg-2">
+                <div class="d-flex">
+                        <div class="row">
+                            <div class="container mt-3">
+                                <div class="input-group mb-3">
+                                    <input id = "input-task" placeholder="Add New Task" type="text" name="ListItem" />
+                                    <div class="input-group-append">
+                                            <button id="button" class="btn btn-success" type="submit">+</button>
+                                        </div>
+        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+          </div>
+          <div class="col-md-auto">
+                <ul class="list-group" id = "mylist">
+
+                        <!-- <div class="container-group">
+                            <li class="list-group-item ">Tal<span class="close">&times;</span></li>
+                                <div class="input-group-append">
+                                    
+                                  <button id = "ok" class="btn btn-primary" type="button">OK</button>
+                                  <button id = "cancel" class="btn btn-danger" type="button">Cancel</button>
+                                </div>
+                        </div> -->
+                        <li class="list-group-item ">Tal</li>
+                        <li class="list-group-item ">Eran</li>
+                        <li class="list-group-item ">Shula</li>
+<!-- 
+                        <li class="list-group-item ">Tal<span class="close">&times;</span></li>
+                        <li class="list-group-item ">Eran<span class="close">&times;</span> </li> -->
     
-<script src="app.js"></script>
+                </ul>   
+          </div>
+          <div class="col col-lg-2 mt-5">
+                <div id = "op-btn-group" class="btn-group">
+                        <button  class="btn btn-success" type="submit"> <a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-ok"></span></a></button>
+                        <button  class="btn btn-success" type="submit"> <a  href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-star-empty"></span></a></button>
+                        <!-- <button  onclick="editTask()" class="btn btn-success" type="submit"> <a  href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-pencil"></span></a></button> -->
+                        <button  onclick="editTask()" class="btn btn-success" type="submit"> Edit</button>
+                        <button  onclick="editTask()" class="btn btn-success" type="submit"> Add</button>
 
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-</script>
+                        <button  class="btn btn-success" type="submit"> <a  href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-trash"></span></a></button>
+
+                        <!-- <input placeholder="Add New Task" type="text" name="ListItem" /> -->
+                </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+          </div>
+        </div>
+      </div>
 
 
 
-  </body>
+    <script src="app.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+
+
+
+</body>
+
 </html>
 
 
 
 
 
-        <!-- <div class="container">
+<!-- <div class="container">
             
 
                 <div class = "row mt-5"> 
@@ -169,3 +173,138 @@
                    
                 </ul>
         </div> -->
+
+
+
+
+                  <!-- <li class="list-group-item ">Html<div class="pull-right action-buttons">
+                            <a id = "edit" href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-pencil"></span></a>
+                            <a id = "Remove" href="http://www.jquery2dotnet.com" class="trash"><span class="glyphicon glyphicon-trash"></span></a>
+                            <a id = "mark" href="http://www.jquery2dotnet.com" class="flag"><span class="glyphicon glyphicon-flag"></span></a>
+                    </div>
+                    
+                     </li> -->
+                    <!-- <li class="list-group-item ">Billy<span class="close">&times;</span></li> -->
+<!-- 
+                    <li class="list-group-item ">Html<div class="pull-right action-buttons">
+                            <a id = "edit" href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-pencil"></span></a>
+                            <a id = "Remove" href="http://www.jquery2dotnet.com" class="trash"><span class="glyphicon glyphicon-trash"></span></a>
+                            <a id = "mark" href="http://www.jquery2dotnet.com" class="flag"><span class="glyphicon glyphicon-flag"></span></a>
+                    </div>
+                    
+                     </li>
+
+                     <li class="list-group-item ">js<div class="pull-right action-buttons">
+                            <a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-pencil"></span></a>
+                            <a href="http://www.jquery2dotnet.com" class="trash"><span class="glyphicon glyphicon-trash"></span></a>
+                            <a href="http://www.jquery2dotnet.com" class="flag"><span class="glyphicon glyphicon-flag"></span></a>
+                    </div>
+                     </li>
+
+                     <li class="list-group-item ">c++<div class="pull-right action-buttons">
+                            <a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-pencil"&times></span></a>
+                            <a href="http://www.jquery2dotnet.com" class="trash"><span class="glyphicon glyphicon-trash"&times></span></a>
+                            <a href="http://www.jquery2dotnet.com" class="flag"><span class="glyphicon glyphicon-flag"></span></a>
+                    </div>
+                     </li> -->
+
+<!-- 
+                     <li class="list-group-item ">
+                        <div class="checkbox">
+                            <input type="checkbox" id="checkbox2" />
+                            <label for="checkbox2"></label>html    
+                            <div class="pull-right action-buttons">
+                                    <a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-pencil"></span></a>
+                                    <a href="http://www.jquery2dotnet.com" class="trash"><span class="glyphicon glyphicon-trash"></span></a>
+                                    <a href="http://www.jquery2dotnet.com" class="flag"><span class="glyphicon glyphicon-flag"></span></a>
+                            </div>
+                        </div>
+                    </li> -->
+
+                    <!-- <li class="list-group-item ">
+                        <div class="checkbox">
+                            <input type="checkbox" id="checkbox2" />
+                            <label for="checkbox2"></label>html
+                            <div class="pull-right action-buttons">
+                                    <a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-pencil"></span></a>
+                                    <a href="http://www.jquery2dotnet.com" class="trash"><span class="glyphicon glyphicon-trash"></span></a>
+                                    <a href="http://www.jquery2dotnet.com" class="flag"><span class="glyphicon glyphicon-flag"></span></a>
+                            </div>
+                        </div>
+                    </li>
+               
+                <li class="list-group-item ">
+                    <div class="checkbox">
+                        <input type="checkbox" id="checkbox2" />
+                            <label for="checkbox2"></label>css
+                                <div class="pull-right action-buttons">
+                                        <a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-pencil"></span></a>
+                                        <a href="http://www.jquery2dotnet.com" class="trash"><span class="glyphicon glyphicon-trash"></span></a>
+                                        <a href="http://www.jquery2dotnet.com" class="flag"><span class="glyphicon glyphicon-flag"></span></a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                       
+                <li class="list-group-item ">
+                    <div class="checkbox">
+                        <input type="checkbox" id="checkbox2" />
+                        <label for="checkbox2"></label>js
+                        <div class="pull-right action-buttons"> 
+                            <a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-pencil"></span></a>
+                            <a href="http://www.jquery2dotnet.com" class="trash"><span class="glyphicon glyphicon-trash"></span></a>
+                            <a href="http://www.jquery2dotnet.com" class="flag"><span class="glyphicon glyphicon-flag"></span></a>
+                        </div>
+                    </div>
+                </li> -->
+
+
+
+
+        <!-- <div class="container"> -->
+
+ 
+<!-- 
+            <div class="d-flex">
+                <div class="row">
+                    <div class="container mt-3">
+                        <div class="input-group mb-3">
+                            <input id = "input-task" placeholder="Add New Task" type="text" name="ListItem" />
+                            <div class="input-group-append">
+                                <button id="button" class="btn btn-success" type="submit">+</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <ul class="list-group" id = "mylist">
+
+                    <div class="container-group">
+                        <li class="list-group-item ">Tal<span class="close">&times;</span></li>
+                            <div class="input-group-append">
+                                
+                              <button id = "ok" class="btn btn-primary" type="button">OK</button>
+                              <button id = "cancel" class="btn btn-danger" type="button">Cancel</button>
+                            </div>
+                    </div>
+                    <li class="list-group-item ">Tal<span class="close">&times;</span></li>
+                    <li class="list-group-item ">Eran<span class="close">&times;</span> </li>
+
+            </ul>    -->
+        <!-- </div>
+        <div class="container">
+
+            
+
+      
+
+        
+        </div>
+        
+
+    
+</div> -->

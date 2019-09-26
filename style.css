@@ -197,9 +197,6 @@ body {
     margin-right: 50px;
     border: solid 1px rgb(194, 184, 184);
     background-color: #111;
-
-
-
   }
 
   .sidebar nav button {
@@ -308,19 +305,55 @@ body {
 
   }
 
+ .list-group-item {
+    -webkit-flex-grow: 1; /* Safari 6.1+ */
+    -webkit-flex-shrink: 1; /* Safari 6.1+ */
+    -webkit-flex-basis: 20px; /* Safari 6.1+ */
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 20px;
+    height: auto;
+
+    max-width:75%;
+    max-height:75%;
+  }
+
+.input-group-append{
+
+    max-width:75%;
+    max-height:75%;
+    font-size: 16px;
+    
+
+}
+#ok{
+    position: relative;
+    max-height:75%;
+    max-height:75%;
+
+    left: 10px;
+
+  }
+  #cancel{
+    position: relative;
+    max-height:75%;
+    max-height:75%;
+
+    left: 10px;
+
+  }
 
 
+  .btn-group{
+    align-content:center;
+  }
+
+  .edit-btn-group{
+      visibility: hidden;
+  }
 
 
-
-
-
-
-
-
-
-
-
+li{cursor: pointer}
 
 
 
